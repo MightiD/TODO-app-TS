@@ -31,8 +31,8 @@ form.addEventListener("submit", (event) => {
         correctInput.textContent = "";
     
         //gets input values
-        let title = titleInput.value;
-        let contents = contentsInput.value;
+        const title = titleInput.value;
+        const contents = contentsInput.value;
 
         //created var with those items
         let item: Item = {title, contents};

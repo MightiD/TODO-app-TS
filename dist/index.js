@@ -1,6 +1,6 @@
 "use strict";
-const form = document.getElementById("form");
 let todoList = [];
+const form = document.getElementById("form");
 form.addEventListener("submit", (event) => {
     event.preventDefault();
     const titleInput = document.getElementById("title");
@@ -15,6 +15,7 @@ form.addEventListener("submit", (event) => {
         const contents = contentsInput.value;
         let item = { title, contents };
         todoList.push(item);
+        todoList.forEach(i => console.log(`Title: ${i.title} \nContents: ${i.contents}`));
     }
     ;
 });
