@@ -1,5 +1,6 @@
 "use strict";
 let todoList = [];
+const table = document.getElementById("todoList");
 const form = document.getElementById("form");
 form.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -16,6 +17,13 @@ form.addEventListener("submit", (event) => {
         let item = { title, contents };
         todoList.push(item);
         todoList.forEach(i => console.log(`Title: ${i.title} \nContents: ${i.contents}`));
+        let newRow = table.insertRow(-1);
+        let titleCell = newRow.insertCell(0);
+        let contentsCell = newRow.insertCell(1);
+        let titleText = document.createTextNode(item.title);
+        let contentsText = document.createTextNode(item.contents);
+        titleCell.appendChild(titleText);
+        contentsCell.appendChild(contentsText);
     }
     ;
 });

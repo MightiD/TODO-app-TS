@@ -12,6 +12,11 @@
         .TI {
             width: 70%;
         }
+        table, th, td {
+            border: 1px solid;
+            table-layout: auto; 
+            border-collapse: collapse;
+        }
     </style>
 </head>
 <body>
@@ -36,8 +41,18 @@
         <label for="submit"></label>
         <input type="submit", id="submit", name="submit" />
 
-
     </form>
+    
+    <br><br><br><br>
+    
+    <table id="todoList">
+
+        <tr>
+            <th>Title</th>
+            <th>Contents</th>
+        </tr>
+
+    </table>
     
     <script src="dist/index.js"></script>
 </body>
